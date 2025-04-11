@@ -1,6 +1,8 @@
-<h1>Blog Posts</h1>
+<h1 class="text-xl sm:text-2xl font-bold text-gray-800">Blog Posts</h1>
 
 <% @blog_posts.each do |blog_post| %>
-  <h2><%= link_to blog_post.title, blog_post %></h2>
-  <p><%= blog_post.body %></p>
+  <div class="border border-1 rounded-md shadow-md p-4 bg-white mb-4">
+    <h2><%= link_to blog_post.title, blog_post, class: "rounded-md flex items-center border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" %></h2>
+    <p class="text-sm"><%= blog_post.body %></p>
+  </div>
 <% end %>

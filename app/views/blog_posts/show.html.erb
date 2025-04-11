@@ -1,3 +1,5 @@
-<%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
-<h1><%= @blog_post.title %></h1>
-<p><%= @blog_post.body %></p>
+<div class="border border-1 rounded-md shadow-md p-4 bg-white">
+  <h1 class="rounded-md flex items-center border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"><%= @blog_post.title %></h1>
+  <p class="text-sm"><%= @blog_post.body %></p>
+</div>
+<%= link_to "Edit", edit_blog_post_path(@blog_post), class: "block rounded-md bg-slate-800 py-2 px-4 mt-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" if user_signed_in? %>
